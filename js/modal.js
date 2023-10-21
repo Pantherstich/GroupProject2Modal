@@ -3,16 +3,22 @@
     openModalBtn: document.querySelector("[data-modal-open]"),
     closeModalBtn: document.querySelector("[data-modal-close]"),
     modal: document.querySelector("[data-modal]"),
+    backDrop: document.querySelector(".body"),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.openModalBtn.addEventListener("click", startModal);
+  refs.closeModalBtn.addEventListener("click", stopModal);
 
-  function toggleModal() {
+  function startModal() {
     refs.modal.classList.toggle("is-hidden");
+    document.body.style.overflow = "hidden";
+  }
+  function stopModal() {
+    refs.modal.classList.toggle("is-hidden");
+    document.body.style.overflow = "";
   }
 })();
-const getted=2.75;
+const getted=4.75;
 
 const modalRatingValue=document.querySelector(".modal-rating-value");
  modalRatingValue.textContent=Math.round(getted *10)/10;
@@ -20,7 +26,9 @@ const modalRatingValue=document.querySelector(".modal-rating-value");
 const ratingValue = modalRating.querySelector(".modal-rating-value").textContent;
 
 // Визначаємо кількість зірок, які потрібно відобразити
-const numberOfStars = Math.floor(ratingValue);
+// const numberOfStars = Math.floor(ratingValue);
+const numberOfStars = Math.round(ratingValue);
+
 const fractionStar = getted % 1;
 console.log(fractionStar);
 // Відображуємо зірки
@@ -31,4 +39,9 @@ for (let i = 0; i < numberOfStars; i++) {
   star.querySelector(".modal-icon-star").classList.add("modal-icon-star");}
   star=starring.querySelector(`.modal-rating-star[data-value="${numberOfStars + 1}"]`);
   fractedStar=star.querySelector(".modal-icon-star");
-fractedStar.style.fill = "linear-gradient(to right, rgba(238, 161, 12, 1) 30%, rgba(244, 244, 244, 0.2) 70%)"
+console.log(fractedStar);
+//   fractedStar.style.background-repeat = "repeat-x";
+// fractedStar.style.fill = "linear-gradient(to right, rgba(238, 161, 12, 1) 30%, rgba(244, 244, 244, 0.2) 70%)"
+
+
+

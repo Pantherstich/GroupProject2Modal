@@ -216,6 +216,8 @@ stroke: rgba(244, 244, 244, 1);
 }
 .inactive{
   fill: rgba(244, 244, 244, 0.2);
+  
+  
 }
 .modal-description-block{
   padding-bottom: 40px;
