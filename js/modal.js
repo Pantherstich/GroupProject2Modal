@@ -42,7 +42,7 @@ const modalEquipment = document.querySelector(".modal-equipment");
 const modalPopularity = document.querySelector(".modal-popularity");
 const modalBurnedCalories = document.querySelector(".modal-burnedCalories");
 const modalDescriptionText = document.querySelector(".modal-description-text");
-
+const modalFavoritiesToogle = document.querySelector(".odal-favorities-toogle");
 
 modalExerciceName.textContent=data.name;
 modalRatingValue.textContent=Math.round(data.rating *10)/10;
@@ -52,7 +52,7 @@ modalEquipment.textContent=data.equipment;
 modalPopularity.textContent=data.popularity;
 modalBurnedCalories.textContent=data.burnedCalories;
 modalDescriptionText.textContent=data.description;
-
+modalFavoritiesToogle.addEventListener("click",FavoritiesToogle);
 
 
 
@@ -74,3 +74,11 @@ for (let i = 0; i < numberOfStars; i++) {
 //   console.dir(star);
 //   const fractedStar=star.querySelector(".modal-icon-star");
 // fractedStar.style.fill = "linear-gradient(to right, rgba(238, 161, 12, 1) 30%, rgba(244, 244, 244, 0.2) 70%)"
+
+
+
+function FavoritiesToogle (event){
+
+
+  
+};
