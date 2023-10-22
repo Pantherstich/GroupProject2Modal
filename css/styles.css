@@ -195,6 +195,9 @@ stroke: rgba(244, 244, 244, 1);
   text-align: left;  
   margin: 0;
 }
+.modal-exercise-name::first-letter {
+  text-transform: capitalize;
+}
 .modal-rating{
   padding-top: 10px;
   display: flex;
@@ -238,8 +241,12 @@ stroke: rgba(244, 244, 244, 1);
   padding-top: 4px;
   margin: 0px;
 }
+.modal-description-block p::first-letter {
+  text-transform: capitalize;
+}
 
 .modal-description-block-items{
+  margin-top: 20px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -298,6 +305,7 @@ border-radius: 30px;
 }
 .modal-describtion-container{
   width: 342px;
+  padding-top: 0px;
 }
 .modal-gif{
   width: 270px;
@@ -309,7 +317,7 @@ border-radius: 30px;
   gap: 28px
 }
 .modal-description-block-items{
-.margin: 16px 0px;
+margin: 16px 0px;
 
 }
 @media screen and (min-width: 1440px){
